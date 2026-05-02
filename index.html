@@ -1008,6 +1008,97 @@
       </div>
     </section>
 
+    
+    <!-- ════════════════════════════════════════
+     SECTION NEWSLETTER
+     ════════════════════════════════════════ -->
+
+<section id="newsletter" class="nl-section">
+
+  <div class="nl-bg-glow"></div>
+  <div class="nl-dots"></div>
+
+  <div class="nl-container">
+
+    <!-- Gauche : texte -->
+    <div class="nl-left">
+      <div class="nl-eyebrow">✦ Communauté BSP</div>
+      <h2 class="nl-title">
+        Rejoins des centaines de croyants<br/>
+        qui marchent dans la <em>victoire</em>
+      </h2>
+      <p class="nl-desc">
+        Reçois chaque semaine des enseignements prophétiques, des décrets à déclarer et des prières puissantes directement dans ta boîte email. Entièrement gratuit.
+      </p>
+      <ul class="nl-perks">
+        <li><span>📖</span> Enseignements bibliques exclusifs</li>
+        <li><span>🔥</span> Décrets prophétiques hebdomadaires</li>
+        <li><span>🎁</span> Extraits et ressources gratuites</li>
+        <li><span>🙏</span> Alertes de jeûne et de prière collective</li>
+      </ul>
+    </div>
+
+    <!-- Droite : formulaire -->
+    <div class="nl-right">
+      <div class="nl-card">
+        <div class="nl-card-top">
+          <div class="nl-stat">
+            <span class="nl-stat-n">500+</span>
+            <span class="nl-stat-l">Inscrits</span>
+          </div>
+          <div class="nl-stat-sep"></div>
+          <div class="nl-stat">
+            <span class="nl-stat-n">Gratuit</span>
+            <span class="nl-stat-l">Pour toujours</span>
+          </div>
+          <div class="nl-stat-sep"></div>
+          <div class="nl-stat">
+            <span class="nl-stat-n">1 clic</span>
+            <span class="nl-stat-l">Pour partir</span>
+          </div>
+        </div>
+
+        <form id="nl-form" class="nl-form" novalidate>
+          <input
+            type="text"
+            id="nl-name"
+            name="name"
+            placeholder="Ton prénom"
+            class="nl-input"
+            autocomplete="given-name"
+            required
+          />
+          <input
+            type="email"
+            id="nl-email"
+            name="email"
+            placeholder="Ton adresse email"
+            class="nl-input"
+            autocomplete="email"
+            required
+          />
+          <button type="submit" class="nl-btn" id="nl-submit-btn">
+            <span class="nl-btn-text">S'inscrire gratuitement ✦</span>
+            <span class="nl-btn-loading" style="display:none;">Envoi…</span>
+          </button>
+          <p class="nl-privacy">🔒 Zéro spam · Désabonnement en 1 clic</p>
+        </form>
+
+        <div id="nl-success" class="nl-success-msg" style="display:none;">
+          <div style="font-size:32px; margin-bottom:12px;">🙏</div>
+          <strong>Bienvenue dans la communauté BSP !</strong>
+          <p>Vérifie ta boîte email pour recevoir tes ressources gratuites. Que Dieu te bénisse !</p>
+        </div>
+
+        <div id="nl-error" class="nl-error-msg" style="display:none;">
+          Une erreur est survenue. <a href="https://wa.me/2250749907695" target="_blank" style="color:var(--gold);">Contacte-nous sur WhatsApp.</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
     <!-- ══════════════════════════════
      FOOTER
 ══════════════════════════════ -->
@@ -1134,6 +1225,209 @@
         </button>
       </div>
     </div>
+
+    <!-- ════════════════════════════════════════
+     POPUP DE CAPTURE EMAIL
+     Apparaît après 15 secondes, 1 fois par visite
+     ════════════════════════════════════════ -->
+
+<div id="email-popup" class="ep-overlay" role="dialog" aria-modal="true" aria-label="Reçois une prière gratuite">
+  <div class="ep-card">
+
+    <!-- Bouton fermeture -->
+    <button class="ep-close" id="ep-close-btn" aria-label="Fermer">✕</button>
+
+    <!-- Déco croix fond -->
+    <div class="ep-cross-bg">✝</div>
+
+    <!-- Dots pattern -->
+    <div class="ep-dots"></div>
+
+    <!-- Contenu -->
+    <div class="ep-content">
+      <div class="ep-badge">✦ Cadeau spirituel gratuit</div>
+
+      <h2 class="ep-title">
+        Reçois une <em>prière de délivrance</em><br/>
+        + un extrait exclusif
+      </h2>
+
+      <p class="ep-desc">
+        Inscris-toi gratuitement et reçois immédiatement sur WhatsApp ou par email :
+      </p>
+
+      <ul class="ep-benefits">
+        <li><span class="ep-check">✦</span> Une prière puissante contre les attaques spirituelles</li>
+        <li><span class="ep-check">✦</span> Un extrait de 10 pages de <em>Combat Spirituel</em></li>
+        <li><span class="ep-check">✦</span> Les enseignements spirituels du Prophète (newsletter)</li>
+      </ul>
+
+      <!-- Formulaire -->
+      <form id="ep-form" class="ep-form" novalidate>
+        <div class="ep-field">
+          <input
+            type="text"
+            id="ep-name"
+            name="name"
+            placeholder="Ton prénom"
+            autocomplete="given-name"
+            required
+          />
+        </div>
+        <div class="ep-field">
+          <input
+            type="email"
+            id="ep-email"
+            name="email"
+            placeholder="Ton adresse email"
+            autocomplete="email"
+            required
+          />
+        </div>
+        <button type="submit" class="ep-submit" id="ep-submit-btn">
+          <span class="ep-submit-text">Recevoir mon cadeau gratuit 🙏</span>
+          <span class="ep-submit-loading" style="display:none;">Envoi en cours…</span>
+        </button>
+        <p class="ep-privacy">🔒 100% gratuit · Zéro spam · Désabonnement en 1 clic</p>
+      </form>
+
+      <!-- État succès -->
+      <div id="ep-success" class="ep-success" style="display:none;">
+        <div class="ep-success-icon">🙏</div>
+        <h3 class="ep-success-title">Gloire à Dieu !</h3>
+        <p class="ep-success-text">Ton extrait et ta prière sont en chemin. Vérifie ta boîte email dans quelques minutes. Que Dieu te bénisse !</p>
+        <button class="ep-success-close" onclick="closeEmailPopup()">Fermer</button>
+      </div>
+
+      <!-- État erreur -->
+      <div id="ep-error" class="ep-error" style="display:none;">
+        <p>Une erreur est survenue. <a href="https://wa.me/2250749907695" target="_blank">Contacte-nous sur WhatsApp</a>.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <script>
+(function() {
+
+  /* ── CONFIG — À MODIFIER ── */
+  const BREVO_LIST_ID = 3;           // ← Ton ID de liste Brevo
+  const POPUP_DELAY_MS = 15000;      // 15 secondes avant affichage popup
+  const POPUP_STORAGE_KEY = 'bsp_popup_shown';
+  const EXTRACT_DOWNLOAD_URL = '';   // URL de l'extrait PDF si tu en as un (optionnel)
+
+  /* ── POPUP ── */
+  const popup   = document.getElementById('email-popup');
+  const closeBtn = document.getElementById('ep-close-btn');
+
+  function showPopup() {
+    if (sessionStorage.getItem(POPUP_STORAGE_KEY)) return;
+    popup.classList.add('ep-visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeEmailPopup() {
+    popup.classList.remove('ep-visible');
+    document.body.style.overflow = '';
+    sessionStorage.setItem(POPUP_STORAGE_KEY, '1');
+  }
+  window.closeEmailPopup = closeEmailPopup;
+
+  // Afficher après délai
+  setTimeout(showPopup, POPUP_DELAY_MS);
+
+  // Afficher aussi quand l'utilisateur veut quitter (exit intent — desktop)
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10) showPopup();
+  }, { once: true });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeEmailPopup);
+
+  // Clic sur l'overlay pour fermer
+  popup.addEventListener('click', function(e) {
+    if (e.target === popup) closeEmailPopup();
+  });
+
+  // Touche Echap
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeEmailPopup();
+  });
+
+  /* ── SOUMISSION BREVO (fonction commune) ── */
+  async function subscribeToBrevo(name, email) {
+    const resp = await fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, listId: BREVO_LIST_ID })
+    });
+    if (!resp.ok) throw new Error('Erreur serveur');
+    return resp.json();
+  }
+
+  /* ── FORMULAIRE POPUP ── */
+  const epForm   = document.getElementById('ep-form');
+  const epSubmit = document.getElementById('ep-submit-btn');
+  const epSuccess = document.getElementById('ep-success');
+  const epError   = document.getElementById('ep-error');
+
+  if (epForm) {
+    epForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name  = document.getElementById('ep-name').value.trim();
+      const email = document.getElementById('ep-email').value.trim();
+      if (!name || !email) return;
+
+      epSubmit.disabled = true;
+      epSubmit.querySelector('.ep-submit-text').style.display = 'none';
+      epSubmit.querySelector('.ep-submit-loading').style.display = 'inline';
+
+      try {
+        await subscribeToBrevo(name, email);
+        epForm.style.display = 'none';
+        epSuccess.style.display = 'block';
+        sessionStorage.setItem(POPUP_STORAGE_KEY, '1');
+      } catch(err) {
+        epSubmit.disabled = false;
+        epSubmit.querySelector('.ep-submit-text').style.display = 'inline';
+        epSubmit.querySelector('.ep-submit-loading').style.display = 'none';
+        epError.style.display = 'block';
+      }
+    });
+  }
+
+  /* ── FORMULAIRE NEWSLETTER SECTION ── */
+  const nlForm    = document.getElementById('nl-form');
+  const nlSubmit  = document.getElementById('nl-submit-btn');
+  const nlSuccess = document.getElementById('nl-success');
+  const nlError   = document.getElementById('nl-error');
+
+  if (nlForm) {
+    nlForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name  = document.getElementById('nl-name').value.trim();
+      const email = document.getElementById('nl-email').value.trim();
+      if (!name || !email) return;
+
+      nlSubmit.disabled = true;
+      nlSubmit.querySelector('.nl-btn-text').style.display = 'none';
+      nlSubmit.querySelector('.nl-btn-loading').style.display = 'inline';
+
+      try {
+        await subscribeToBrevo(name, email);
+        nlForm.style.display = 'none';
+        nlSuccess.style.display = 'block';
+      } catch(err) {
+        nlSubmit.disabled = false;
+        nlSubmit.querySelector('.nl-btn-text').style.display = 'inline';
+        nlSubmit.querySelector('.nl-btn-loading').style.display = 'none';
+        nlError.style.display = 'block';
+      }
+    });
+  }
+
+})();
+</script>
 
     <script src="main.js"></script>
   </body>
