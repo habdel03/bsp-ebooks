@@ -34,7 +34,7 @@ exports.handler = async function(event) {
     const body = JSON.parse(event.body || '{}');
     name   = (body.name   || '').trim();
     email  = (body.email  || '').trim();
-    listId = parseInt(body.listId) || 3;
+    listId = parseInt(body.listId) || 8;
   } catch(e) {
     return { statusCode: 400, headers, body: JSON.stringify({ error: 'JSON invalide' }) };
   }
